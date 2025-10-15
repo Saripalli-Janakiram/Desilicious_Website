@@ -160,3 +160,36 @@
   }
 }
 
+// src/app/app.component.scss
+
+:root {
+  --accent: #f6c667;
+  --bg: #0e1319;
+  --text: #f3f3f3;
+  --muted: #bfbfbf;
+}
+
+.app-content {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-footer {
+  background: var(--bg);
+  color: var(--muted);
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(246, 198, 103, 0.2);
+  letter-spacing: 0.5px;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+.app-footer p:hover {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}

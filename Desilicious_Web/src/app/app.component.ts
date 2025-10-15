@@ -15,4 +15,5 @@ export class AppComponent {
   closeMenu() {
     this.menuOpen = false;
   }
+   currentYear = new Date().getFullYear();
 }

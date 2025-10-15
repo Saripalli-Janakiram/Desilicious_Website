@@ -106,3 +106,23 @@
     grid-template-columns: 1fr;
   }
 }
+/* Force Material tab background to gold */
+::ng-deep .mat-mdc-tab-header {
+  background-color: #614e28 !important;
+}
+
+/* Optional: make active tab text dark for contrast */
+::ng-deep .mat-mdc-tab.mdc-tab--active {
+  color: #0e1319 !important; /* dark background text */
+  font-weight: 600;
+}
+
+/* Non-active tabs text darker gray */
+::ng-deep .mat-mdc-tab {
+  color: #2e2e2e !important;
+}
+
+/* Adjust tab ink bar (underline) */
+::ng-deep .mat-mdc-tab-indicator {
+  background-color: #0e1319 !important; /* dark underline */
+}

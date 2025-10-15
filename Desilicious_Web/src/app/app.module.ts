@@ -14,6 +14,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { CateringComponent } from './catering/catering.component';
 import { MatListModule } from '@angular/material/list';
+import { ContactComponent } from './contact/contact.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { MatListModule } from '@angular/material/list';
     HomeComponent,
     AboutComponent,
     MenuComponent,
-    CateringComponent
+    CateringComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { MatListModule } from '@angular/material/list';
     MatCardModule,
     MatDividerModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
