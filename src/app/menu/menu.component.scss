@@ -1,0 +1,126 @@
+// src/app/menu/menu.component.scss
+
+:root {
+  --accent: #f6c667;
+  --bg: #7c7b0b;
+  --text: #f3f3f3;
+  --muted: #c9c9c9;
+}
+
+.menu-header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  color: var(--text);
+}
+
+.menu-header h1 {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.menu-header p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* Material tabs */
+::ng-deep .mat-mdc-tab-group {
+  background: var(--bg);
+  color: var(--text);
+}
+
+::ng-deep .mat-mdc-tab-labels {
+  justify-content: center;
+}
+
+::ng-deep .mat-mdc-tab {
+  color: var(--text) !important;
+}
+
+::ng-deep .mat-mdc-tab.mdc-tab--active {
+  color: var(--accent) !important;
+}
+
+/* Menu layout */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  padding: 30px;
+  background: var(--bg);
+}
+
+.menu-card {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(246, 198, 103, 0.25);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.menu-text h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--accent);
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+mat-icon {
+  font-size: 18px;
+  margin-right: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-grid {
+    padding: 14px;
+    grid-template-columns: 1fr;
+  }
+}
+/* Force Material tab background to gold */
+::ng-deep .mat-mdc-tab-header {
+  background-color: #614e28 !important;
+}
+
+/* Optional: make active tab text dark for contrast */
+::ng-deep .mat-mdc-tab.mdc-tab--active {
+  color: #0e1319 !important; /* dark background text */
+  font-weight: 600;
+}
+
+/* Non-active tabs text darker gray */
+::ng-deep .mat-mdc-tab {
+  color: #2e2e2e !important;
+}
+
+/* Adjust tab ink bar (underline) */
+::ng-deep .mat-mdc-tab-indicator {
+  background-color: #0e1319 !important; /* dark underline */
+}

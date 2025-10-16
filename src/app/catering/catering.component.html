@@ -1,0 +1,22 @@
+<!-- src/app/catering/catering.component.html -->
+
+<section class="catering-header">
+  <h1>Catering Menu</h1>
+  <p>South Indian Vegetarian Catering – Perfect for Every Celebration</p>
+</section>
+
+<mat-tab-group backgroundColor="primary" mat-stretch-tabs>
+  <mat-tab *ngFor="let section of cateringMenu" [label]="section.category">
+
+    <div class="catering-grid">
+      <mat-card *ngFor="let item of section.list" class="catering-card">
+        <mat-card-content>
+          <div class="catering-item">
+            <h3>{{ item }}</h3>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </mat-tab>
+</mat-tab-group>

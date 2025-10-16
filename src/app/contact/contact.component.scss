@@ -1,0 +1,125 @@
+// src/app/contact/contact.component.scss
+
+:root {
+  --accent: #f6c667;
+  --bg: #0e1319;
+  --text: #f3f3f3;
+  --muted: #c9c9c9;
+}
+
+.contact-header {
+  text-align: center;
+  padding: 40px 20px 10px;
+  color: var(--text);
+}
+
+.contact-header h1 {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.contact-header p {
+  color: var(--muted);
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background: var(--bg);
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border-radius: 14px;
+  width: 500px;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(246, 198, 103, 0.25);
+}
+
+mat-card-content p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+
+mat-icon {
+  color: var(--accent);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: #25d366 !important;
+  color: white !important;
+}
+
+.whatsapp-btn mat-icon {
+  color: white !important;
+  margin-right: 8px;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 16px;
+}
+
+.social-links p {
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.social-links a {
+  margin-right: 10px;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+}
+
+/* Partners */
+.partners {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.partners img {
+  height: 35px;
+  object-fit: contain;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease;
+}
+
+.partners img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contact-card {
+    width: 90%;
+  }
+}

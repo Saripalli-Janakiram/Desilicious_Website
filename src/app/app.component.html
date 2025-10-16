@@ -1,0 +1,34 @@
+<!-- src/app/app.component.html -->
+<nav class="navbar">
+  <div class="brand">
+    <h1>Desilicious Cafe</h1>
+  </div>
+
+  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+  <ul class="nav-links" [class.active]="menuOpen">
+    <li><a href="#home" (click)="closeMenu()">Home</a></li>
+    <li><a href="#about" (click)="closeMenu()">About Us</a></li>
+    <li><a href="#menu" (click)="closeMenu()">Menu</a></li>
+    <li><a href="#catering" (click)="closeMenu()">Caterings</a></li>
+    <li><a href="#contact" (click)="closeMenu()">Contact Us</a></li>
+  </ul>
+</nav>
+<section id="home">
+  <app-home></app-home>
+</section>
+<section id="about">
+  <app-about></app-about>
+</section>
+<section id="menu">
+  <app-menu></app-menu>
+</section>
+<section id="catering">
+  <app-catering></app-catering>
+</section>
+<section id="contact">
+<app-contact></app-contact>
+</section>
+<footer class="app-footer">
+  <p>© {{ currentYear }} Desilicious Cafe — The Orient LLC. All Rights Reserved.</p>
+</footer>

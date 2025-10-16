@@ -1,0 +1,195 @@
+// 🌈 Desilicious Cafe - Colorful Navbar Theme
+
+:root {
+  --bg-gradient: linear-gradient(90deg, #1a0f2a, #2b1b3d, #3a1e4b);
+  --accent: #f6c667; // golden glow
+  --highlight: #ff914d; // warm orange
+  --leaf: #50c878; // soft green accent
+  --text: #f4f4f4;
+  --muted: #cfcfcf;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-gradient);
+  padding: 14px 24px;
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 6px 12px rgba(251, 247, 247, 0.4);
+  transition: all 0.4s ease;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(246, 198, 103, 0.6);
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: radial-gradient(circle at top left, var(--accent), #8b6b2e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #eeedef;
+  font-size: 1.3rem;
+  box-shadow: 0 0 20px rgba(246, 198, 103, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, var(--highlight), var(--leaf));
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 1.5rem;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-toggle:hover {
+  background: var(--accent);
+  color: #e7e4eb;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1000; // keeps navbar above all content
+}
+
+/* Mobile menu overlay */
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(232, 198, 177, 0.95);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 16px;
+    position: fixed;
+    top: 72px;
+    right: 20px;
+    width: 220px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 2000; // ensures overlay is above all
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 0.4s ease;
+  }
+
+  .nav-links a {
+    width: 100%;
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 2100; // ensures toggle is on top
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// src/app/app.component.scss
+
+:root {
+  --accent: #f6c667;
+  --bg: #0e1319;
+  --text: #f3f3f3;
+  --muted: #bfbfbf;
+}
+
+.app-content {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-footer {
+  background: var(--bg);
+  color: var(--muted);
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(246, 198, 103, 0.2);
+  letter-spacing: 0.5px;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+.app-footer p:hover {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
