@@ -11,11 +11,11 @@ export class HomeComponent implements OnInit {
 
   // You can replace these with your restaurant dish images
   slides = [
-    { src: '../../assets/banner-1.jpg', caption: 'Authentic South Indian Breakfasts' },
-    { src: '../../assets/banner-2.jpg', caption: 'Place For Vegan' },
-    { src: '../../assets/banner-3.jpg', caption: 'Catering for Every Occasion' },
-    { src: '../../assets/banner-4.jpg', caption: '100% Vegetarian' },
-     { src: '../../assets/banner-5.jpg', caption: 'Delicious Vegetarian Meals' },
+    { src: 'assets/banner-1.jpg', caption: 'Authentic South Indian Breakfasts' },
+    { src: 'assets/banner-2.jpg', caption: 'Place For Vegan' },
+    { src: 'assets/banner-3.jpg', caption: 'Catering for Every Occasion' },
+    { src: 'assets/banner-4.jpg', caption: '100% Vegetarian' },
+     { src: 'assets/banner-5.jpg', caption: 'Delicious Vegetarian Meals' },
   ];
 
   ngOnInit() {
